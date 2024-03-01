@@ -9,8 +9,8 @@
 }
 
 body {
-    background: #081b29;
     color: #ededed;
+    background-color: #081b29;
 }
 
 .header {
@@ -27,13 +27,27 @@ body {
 }
 
 .logo {
+    position: relative;
     font-size: 25px;
     color: #ededed;
     text-decoration: none;
     font-weight: 600;
 }
 
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: .3s;
+}
+
 .navbar a {
+    /* position: fixed; */
     font-size: 18px;
     color: #ededed;
     text-decoration: none;
@@ -48,38 +62,94 @@ body {
 }
 
 .home {
-    height: 100vh;
+    min-height: 100vh; /*remoeve min*/
+    background: url(homeimage.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     padding: 0 10%;
 }
 
 .home-content {
-    max-width: 800px;
+    max-width: 700px;
+}
+
+.home-content h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1s;
 }
 
 .home-content h1 {
+    position: relative;
     font-size: 56px;
     font-weight: 700;
     line-height: 1.2;
 }
 
 .home-content h3 {
+    position: relative;
     font-size: 32px;
     font-weight: 700;
     color: #00abf0;
 }
 
+.home-content h3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.3s;
+}
+
 .home-content p {
+    position: relative;
     font-size: 16px;
     margin: 20px 0 40px;
 }
 
+.home-content p::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.6s;
+}
+
 .home-content .btn-box {
+    position: relative;
     width: 345px;
     height: 50px;
     display: flex;
     justify-content: space-between;
+}
+
+.home-content .btn-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.9s;
+    z-index: 2;
 }
 
 .btn-box a {
@@ -141,6 +211,29 @@ body {
     width: 170px;
     display: flex;
     justify-content: space-between;
+    margin-top: auto;
+}
+
+.footer {
+    position: relative;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    background: #693f3f;
+    border: solid red 2px;
+}
+
+.home-sci::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2.5s;
+    z-index: 2;
 }
 
 .home-sci a {
@@ -179,3 +272,69 @@ body {
 .home-sci a:hover {
     color: #081b29;
 }
+
+.home-imgHover {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 850px;
+    height: 100%;
+    background: transparent;
+}
+
+.home-imgHover:hover {
+    background: #081b29;
+    opacity: .8;
+    transition: 3s;
+}
+
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
+
+.objective {
+    /* position: relative; */
+    background-color: red;
+    margin: 10rem 30rem 23rem 30rem;
+    color: #ededed;
+    font-size: 30px;
+}
+
+h2 {
+    margin: 3rem 5rem;
+}
+
+.skills {
+    border: 5px solid red;
+    display: flex;
+    justify-content: space-between;
+    margin: 15rem 15rem;
+    height: 70rem
+}
+
+.skills2,.skills1 {
+    background-color: yellowgreen;
+    margin-bottom: 10rem;
+    justify-content: safe;
+}
+
+.skills2 {
+    font-size: 30px;
+    margin: 5rem 15rem 15rem 10rem;
+    width: 25rem;
+
+}
+
+.skills1 {
+    border: 4px solid yellowgreen;
+    height: 65rem;
+    width: 50rem;
+    background-image: url(/header\ image2.jpg);
+    background-size: cover;
+}
+
+
+
+
